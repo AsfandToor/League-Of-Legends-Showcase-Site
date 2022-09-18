@@ -1,0 +1,62 @@
+@import "../../sass/variables";
+
+.features-section {
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+  background: rgb(39, 56, 73);
+  background: linear-gradient(
+    45deg,
+    rgba(39, 56, 73, 1) 0%,
+    rgba(79, 89, 97, 1) 50%,
+    rgba(39, 56, 73, 1) 100%
+  );
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  padding-top: 15rem;
+
+  .section-title {
+    text-align: center;
+    color: $font-white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .feature {
+      width: 90%;
+      margin: 8rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .feature-icon {
+        position: relative;
+        background-color: $primary-orange;
+        width: 120px;
+        height: 120px;
+        clip-path: polygon(50% 0%, 100% 45%, 82% 100%, 18% 100%, 0% 45%);
+
+        & .icon {
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .feature-text {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        color: $font-white;
+        text-align: center;
+
+        span {
+          color: $primary-orange;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
