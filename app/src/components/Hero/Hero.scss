@@ -1,0 +1,47 @@
+@import "../../sass/variables";
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    .img-wrapper {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $shadow-dark;
+      }
+
+      & ~ .caption {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+
+        h2 {
+          color: $font-white;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}

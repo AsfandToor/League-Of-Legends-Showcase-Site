@@ -1,0 +1,28 @@
+@import "../../sass/variables";
+
+.search-container {
+  border: 1px solid $font-white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+
+  .search {
+    padding: 0.5rem 1rem;
+    color: $font-white;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid $font-white;
+    outline: none;
+
+    &::placeholder {
+      color: $font-white;
+    }
+  }
+
+  .search-icon {
+    margin: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../sass/variables";
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15rem;
+  background-color: $shadow-light;
+
+  .nav-logo {
+    .logo-wrapper {
+      $size: 120px;
+      width: $size;
+      height: $size;
+
+      img {
+        $size: 100%;
+        width: $size;
+        height: $size;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .nav-list {
+    list-style-type: none;
+
+    .nav-item {
+      $margin: 0 20px;
+      position: relative;
+      display: inline-block;
+      margin: $margin;
+
+      .nav-link {
+        text-decoration: none;
+        font-size: 15px;
+        color: $font-white;
+      }
+
+      &::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        background-color: $font-white;
+        transition: all 0.4s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
